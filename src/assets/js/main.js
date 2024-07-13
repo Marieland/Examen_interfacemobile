@@ -49,6 +49,8 @@ class Card{
 
  const gridContainer = document.getElementById('grid-container');
 
+ // J'aurais aime que tu type cette variable.
+ /** @type {Card[]} */
 const cards = [
     new Card ("1", "300px/300px","200px/200px","rouge"),
     new Card ("2", "300px/300px","200px/200px","bleu"),
@@ -65,16 +67,15 @@ cards.forEach(card =>{
     gridContainer.appendChild(card.tohtml());   
 });
 
+// JSdoc devrait etre -0.25
 
+/** @type {HTMLElement}*/
 const toggleButton = document.getElementById("toggleButton");
+/** @type {HTMLElement[]}*/
 const cardsHtml = document.querySelectorAll('.card');
+/** @type {HTMLElement}*/
 const body = document.querySelector('body');
 
-/**
- * @param {HTMLElement} body
- * @param {HTMLElement} toggleButton
- * @param {HTMLElement[]} cardsHtml
- */
 
 toggleButton.addEventListener("click", () => {
 
